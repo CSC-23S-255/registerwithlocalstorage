@@ -17,7 +17,7 @@ function Dashborad() {
     <div>
     <Navbar style={{marginBottom:"50px"}} expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand style={{color:"white"}} href="#home">Wellcome to the Dashborad</Navbar.Brand>
+        <Navbar.Brand  href="#home">Wellcome to the Dashborad</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{marginLeft:"500px"}} className="me-auto">
