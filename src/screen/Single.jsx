@@ -1,38 +1,41 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { ProductData } from '../ProductData';
-import Card from 'react-bootstrap/Card';
+
 
 
 const Single = () => {
-    const { id } = useParams();
- 
-    const filterdata = ProductData.filter((e,i)=>{
-      return e.id = id ;
+    const  { id } = useParams();
+    console.log(id);
 
-    });
-    console.log(filterdata)
+    const filterData = ProductData.filter((e,i)=>{
+    return e.id == id
+
+    })
+    console.log(filterData)
   return (
     <div>
-      {filterdata.map((e,i)=>{
-        return (
-            <div style={{marginLeft:"400px"}} key={i}>
-                 <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={e.image} />
-            <Card.Body>
-            <Card.Title>{e.title}</Card.Title>
-            <Card.Text>
-              {e.description}
-           </Card.Text>
-        
-             </Card.Body>
-       </Card>
+      
+      {filterData.map((e,i)=>{
+       return(
+        <div key={i} style={{textAlign:"center"}} > 
+          <img width={200} src={e.image}  />
+          <h2>{e.title}</h2>
+           <h2>Price : {e.price}</h2>
+          <p>{e.description}</p>
+          <button className='btn btn-success'>Buy</button>
+        </div>
+       )
 
-            </div>
-        )
       })}
+
+
+
+
     </div>
-  )
+        )
+    
+
 }
 
 export default Single

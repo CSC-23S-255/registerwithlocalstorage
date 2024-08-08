@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 export default function Cards({ title, desc, image, id }) {
   const navigate = useNavigate();
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} image={image} title="green iguana" />
+    <Card style={{boxShadow:"3px 3px 3px 3px lightgreen"}} sx={{ maxWidth: 345 }}>
+      <CardMedia  sx={{ height: 140 }} image={image} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
@@ -21,7 +21,7 @@ export default function Cards({ title, desc, image, id }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button style={{backgroundColor:"lightblue",color:'black'}} onClick={() => navigate(`/products/${id}`)} size="large">
+        <Button style={{backgroundColor:"lightblue",color:'black',marginLeft:"130px",boxShadow:"1px 1px 1px 1px black"}} onClick={() => navigate(`/products/${id}`)} size="large">
           add
         </Button>
       </CardActions>
